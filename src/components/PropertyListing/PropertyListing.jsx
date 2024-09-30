@@ -31,13 +31,15 @@ const PropertyListing = () => {
 
     return (
         <ul className="PropertyListing">
-            {Array(5)
-                .fill(DUMMY_PROPERTY)
-                .map((property, index) => (
-                    <li key={index}>
+            {properties.length === 0 ? (
+                <li>No properties satisfy your request.</li>
+            ) : (
+                properties.map((property) => (
+                    <li key={property.id}>
                         <PropertyCard {...property} />
                     </li>
-                ))}
+                ))
+            )}
         </ul>
     );
 };
