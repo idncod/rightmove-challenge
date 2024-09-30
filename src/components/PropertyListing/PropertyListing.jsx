@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropertyCard from '../PropertyCard';
 import './PropertyListing.scss';
 
@@ -18,6 +18,10 @@ const DUMMY_PROPERTY = {
 };
 
 const PropertyListing = () => {
+    const [properties, setProperties] = useState([]);
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
+
     return (
         <ul className="PropertyListing">
             {Array(5)
