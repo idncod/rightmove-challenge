@@ -10,7 +10,7 @@ const PropertyListing = () => {
     useEffect(() => {
         const fetchProperties = async () => {
             try {
-                const res = await fetch('https://rightmove-challenge.onrender.com');
+                const res = await fetch('https://rightmove-challenge.onrender.com/api/properties');
                 if(!res.ok) {
                     throw new Error('Failed to fetch properties!');
                 }

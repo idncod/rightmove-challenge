@@ -12,5 +12,5 @@ app.use(routes);
 
 const PORT = 'https://rightmove-challenge.onrender.com' || 3000;
 app.listen(PORT, () => {
-    console.log(`Listening on: localhost:${PORT}`);
+    console.log(`Listening on: http://localhost:${PORT}`);
 });
