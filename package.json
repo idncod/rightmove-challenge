@@ -33,14 +33,12 @@
         "vite": "^3.0.0"
     },
     "scripts": {
-        "start": "node ./server/index.js",
+        "start": "run-p server dev:vite",
+        "server": "nodemon ./server/index.js",
         "build": "vite build",
-        "dev": "nodemon ./server/index.js",
-        "test": "jest",
+        "dev:vite": "vite",
+        "test": "jest --watchAll",
         "lint": "eslint .",
-        "prebuild": "npm run clean",
-        "clean": "rimraf dist",
-        "postinstall": "npm run build"
+        "start:prod": "node ./server/index.js"
     }
-
 }
